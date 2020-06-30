@@ -12,6 +12,7 @@ def init():
         0: "Sair"
     }
     operacoes = {
+        0: "sair",
         1: soma,
         2: subtracao,
         3: divisao,
@@ -24,9 +25,10 @@ def init():
     while opcao != 0:
         opcao = int(menu(opcoes))
         if not opcao in operacoes:
-            if opcao != 0:
-                print("opção invalida")
+            print("opção invalida")
 
+        elif opcao == 0:
+            break
         elif opcao == 6:
             print("")
             print(
